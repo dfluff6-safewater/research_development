@@ -59,6 +59,7 @@
   .hero h1{font-size:clamp(30px,5vw,52px);line-height:1.12;font-weight:700;
     letter-spacing:-.01em;color:var(--teal-deep);max-width:18ch}
   .hero .lead{margin-top:24px;font-size:clamp(16px,2vw,19px);max-width:60ch;color:#34474a}
+  .hero .subtitle{margin-top:18px;font-size:clamp(17px,2.4vw,22px);font-weight:600;color:var(--teal-deep);max-width:50ch}
   .hero .cta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
   .btn{display:inline-block;text-decoration:none;font-size:14.5px;letter-spacing:.02em;
     padding:13px 26px;border-radius:6px;transition:.2s;font-weight:600}
@@ -134,6 +135,7 @@
   .hero-photo{border-radius:14px;overflow:hidden;border:1px solid var(--line);
     box-shadow:0 18px 40px -24px rgba(6,58,63,.5)}
   .hero-photo img{width:100%;height:100%;object-fit:cover;aspect-ratio:1/1}
+  .hero-photo-mobile{display:none}
   .media{margin-top:40px;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
   .media img{width:100%;object-fit:cover}
   .split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-top:40px}
@@ -153,7 +155,9 @@
   .step p{font-size:13.5px;color:#415457}
   @media(max-width:780px){
     .hero-grid{grid-template-columns:1fr;gap:30px}
-    .hero-photo{order:-1}
+    .hero-photo-desktop{display:none}
+    .hero-photo-mobile{display:block;margin:26px 0 6px}
+    .hero-photo-mobile img{aspect-ratio:4/3}
     .split{grid-template-columns:1fr;gap:24px}
     .steps{grid-template-columns:1fr}
   }
@@ -210,13 +214,20 @@
 <div class="hero">
   <div class="wrap">
     <div class="hero-grid">
-      <div>
+      <div class="hero-text">
         <div class="eyebrow" data-en>Patented silver-zeolite water disinfection</div>
         <div class="eyebrow" data-jp>特許取得済み 銀型ゼオライト水質除菌技術</div>
         <h1>
-          <span data-en class="block">Safe water that lasts — without power, fuel, or plumbing.</span>
-          <span data-jp class="block">電気も燃料も配管もいらない、続く水の安全性。</span>
+          <span data-en class="block">Connecting the World with Safe Water</span>
+          <span data-jp class="block">世界へつなぐ、安心の水。</span>
         </h1>
+        <p class="subtitle">
+          <span data-en class="block">A silver-ion technology you simply add to water — ナチュルPlus.</span>
+          <span data-jp class="block">水に入れるだけの銀イオンテクノロジー「ナチュルPlus」。</span>
+        </p>
+        <div class="hero-photo hero-photo-mobile">
+          <img src="hero-beads.jpg" alt="Pouring water into a bottle filled with ナチュルPlus silver-zeolite beads">
+        </div>
         <p class="lead">
           <span data-en class="block">D-Fluff develops a patented sintered ceramic bead of silver-exchanged zeolite. Placed in water, it releases silver ions that disinfect within minutes and keep working for months — a simple tool for communities where clean water is hardest to reach.</span>
           <span data-jp class="block">D-Fluffは、銀イオン交換ゼオライトを焼成した特許セラミックビーズを開発しています。水に入れると銀イオンが放出され、数分で除菌し、その効果が数か月続きます。清潔な水が最も届きにくい地域のための、シンプルな道具です。</span>
@@ -228,8 +239,8 @@
           <a class="btn btn-ghost" href="#contact" data-jp>お問い合わせ</a>
         </div>
       </div>
-      <div class="hero-photo">
-        <img src="step3-done.png" alt="ナチュルPlus PRO spray bottle with silver-zeolite beads">
+      <div class="hero-photo hero-photo-desktop">
+        <img src="hero-beads.jpg" alt="Pouring water into a bottle filled with ナチュルPlus silver-zeolite beads">
       </div>
     </div>
   </div>
