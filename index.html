@@ -136,6 +136,7 @@
     box-shadow:0 18px 40px -24px rgba(6,58,63,.5)}
   .hero-photo img{width:100%;height:100%;object-fit:cover;aspect-ratio:1/1}
   .hero-photo-mobile{display:none}
+  .br-sp{display:none}
   .media{margin-top:40px;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
   .media img{width:100%;object-fit:cover}
   .split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-top:40px}
@@ -155,6 +156,7 @@
   .step p{font-size:13.5px;color:#415457}
   @media(max-width:780px){
     .hero-grid{grid-template-columns:1fr;gap:30px}
+    .br-sp{display:inline}
     .hero-photo-desktop{display:none}
     .hero-photo-mobile{display:block;margin:26px 0 6px}
     .hero-photo-mobile img{aspect-ratio:auto;height:auto;object-fit:contain}
@@ -219,11 +221,11 @@
         <div class="eyebrow" data-jp>特許取得済み 銀型ゼオライト水質除菌技術</div>
         <h1>
           <span data-en class="block">Connecting the World with Safe Water</span>
-          <span data-jp class="block">世界へつなぐ、安心の水。</span>
+          <span data-jp class="block">世界へつなぐ、<br class="br-sp">安心の水。</span>
         </h1>
         <p class="subtitle">
           <span data-en class="block">A silver-ion technology you simply add to water — ナチュルPlus.</span>
-          <span data-jp class="block">水に入れるだけの銀イオンテクノロジー「ナチュルPlus」。</span>
+          <span data-jp class="block">水に入れるだけの銀イオンテクノロジー<br class="br-sp">「ナチュルPlus」。</span>
         </p>
         <div class="hero-photo hero-photo-mobile">
           <img src="hero-beads.jpg" alt="Pouring water into a bottle filled with ナチュルPlus silver-zeolite beads">
